@@ -119,24 +119,16 @@ text-shadow: 5px 5px 10px black;
   border: 1px solid #ccc;
 }
 
-.filtros {
-  margin-top: 10px;
+.filtros  {
+
   text-align: center;
   
-  
-}
-
-.filtros button {
-  padding: 10px;
-  margin: 2px;
-  border: none;
-  border-radius: 8px;
 }
 
 .filtros #ativo {
   background: #2e7d32;
   color: white;
-  padding: 10px;
+  padding: 5px;
   margin: 2px;
   border: none;
   border-radius: 8px;
@@ -145,17 +137,17 @@ text-shadow: 5px 5px 10px black;
 .filtros #ativo2{
   background: rgb(241, 164, 101);
   color: rgb(97, 54, 19);
-   padding: 10px;
+   padding: 5px;
   margin: 2px;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   text-decoration: none;
 }
 
 .filtros #ativo3{
   background: #73c0f3;
   color: rgb(0, 102, 236);
-   padding: 10px;
+   padding: 5px;
   margin: 2px;
   border: none;
   border-radius: 8px;
@@ -280,13 +272,14 @@ footer {
 }
 
 /* MOBILE */
-@media(max-width: 600px) {
+@media(max-width: 480px) {
 
   .menu {
     display: none;
     
   
   }
+  
 .acoes a {
     font-size: 12px;
     padding: 6px 8px;
