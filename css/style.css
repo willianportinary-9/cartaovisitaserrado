@@ -25,20 +25,23 @@ body {
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(green, orange);
-  border-radius: 50%;
-  margin-right: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 60%;
+  margin-right: 2px;
+  background: url(/img/iconelogo.png)center/cover;
 }
 
 .logo-text span {
-  font-size: 12px;
+  font-size: 18px;
+  text-shadow: none;
 }
 
 .logo-text strong {
   display: block;
+  font-size: 20px;
   color: #2e7d32;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 .menu a {
@@ -52,7 +55,19 @@ body {
   color: white;
   padding: 10px 15px;
   border-radius: 8px;
+  text-decoration: none;
+  
+  
 }
+.btn-whats #iconelogo{
+  width: 25px ;
+  margin-bottom: -5px;
+  margin-right: 5px;
+  margin-top: -4px;
+  
+
+}
+
 
 /* BANNER */
 .banner {
@@ -62,17 +77,25 @@ body {
   align-items: center;
   padding: 40px;
   color: rgb(255, 255, 255);
+
 }
 
 .banner h1 {
   font-size: 40px;
+text-shadow: 5px 5px 10px black;
+
+}
+.banner .banner-content p{
+  text-shadow: 5px 5px 10px black;
+  
+  
 }
 
 .banner button {
-  margin-top: 80px;
+  margin-top: 5px;
   background: #2e7d32;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 8px;
 
   
@@ -105,6 +128,14 @@ body {
 .filtros .ativo {
   background: #2e7d32;
   color: white;
+}
+.filtros .ativo2{
+  background: rgb(250, 174, 113);
+  color: rgb(185, 91, 3);
+}
+.filtros .ativo3{
+  background: #73c0f3;
+  color: rgb(0, 102, 236);
 }
 
 /* CARDS */
@@ -169,13 +200,16 @@ footer {
 }
 
 /* MOBILE */
-@media(max-width: 768px) {
+@media(max-width: 600px) {
 
   .menu {
     display: none;
   
   }
-
+.acoes a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
   .banner {
     height: 250px;
     padding: 20px;
