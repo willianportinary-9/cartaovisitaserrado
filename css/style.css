@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f5f3ef;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(green, orange);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo-text span {
+  font-size: 12px;
+}
+
+.logo-text strong {
+  display: block;
+  color: #2e7d32;
+}
+
+.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-whats {
+  background: #2e7d32;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* BANNER */
+.banner {
+  background: url('../img/logo1.png') center/cover;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.banner h1 {
+  font-size: 40px;
+}
+
+.banner button {
+  margin-top: 80px;
+  background: #2e7d32;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  
+}
+
+/* BUSCA */
+.busca {
+  padding: 20px;
+  text-align: center;
+}
+
+.busca input {
+  width: 80%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.filtros {
+  margin-top: 10px;
+}
+
+.filtros button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+}
+
+.filtros .ativo {
+  background: #2e7d32;
+  color: white;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  background: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tag {
+  background: green;
+  color: white;
+  padding: 3px 6px;
+  font-size: 10px;
+}
+
+.restaurante {
+  background: orange;
+}
+
+/* MAPA */
+.mapa {
+  display: flex;
+  padding: 40px;
+  background: #e8efe6;
+}
+
+.mapa-img {
+  flex: 1;
+  height: 200px;
+  background: #cfe3cd;
+  border-radius: 10px;
+}
+
+/* TURISMO */
+.turismo-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #1b5e20;
+  color: white;
+  padding: 30px;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+
+  .menu {
+    display: none;
+  
+  }
+
+  .banner {
+    height: 250px;
+    padding: 20px;
+  
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mapa {
+    flex-direction: column;
+  }
+
+  .turismo-grid {
+    grid-template-columns: 1fr;
+  }
+.nota {color: #1b5e20;
+
+}
+}
