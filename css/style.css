@@ -159,29 +159,40 @@ text-shadow: 5px 5px 10px black;
 
 .destaques .topo {
   text-align: center;
+  
 }
+
 
 
 
 /* CARDS */
 .cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap; /* NÃO quebra linha */
+  overflow-x: auto; /* ativa scroll lateral */
+  gap: 15px;
+  padding: 15px; 
+  scroll-snap-type: x mandatory;
 
 }
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
 .cards h3{
 margin: 5px;
 
 }
 .card {
-  width: 250px;
+  min-width: 250px;
   background: white;
+  flex-shrink: 10;
   margin: 15px;
   padding: 1px;
   border-radius: 10px;
   border: 1px solid #929292;
-  
+  scroll-snap-align: start;
+
 }
  .card p {
   margin: 5px 5px 5px;
@@ -227,6 +238,7 @@ margin: 5px;
 .card img {
   width: 100%;
   border-radius: 10px;
+  
 }
 
 .tag {
@@ -290,11 +302,10 @@ footer {
     padding: 20px;
   
   }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
+.cards::-webkit-scrollbar {
+  display: none;
+}
+  
 
   .mapa {
     flex-direction: column;
