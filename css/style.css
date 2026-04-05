@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #d4ebd4ad;
+  background: #e6e7e62c;
 }
 
 /* HEADER */
@@ -126,13 +126,17 @@ body {
 .filtros  {
 
   text-align: center;
+  font-size: 100%;
+  font-size: large;
+  margin-bottom: -10px;
+  margin-top: 10px;
   
   
 }
 
 .filtros #ativo {
-  background: #2e7d32d2;
-  color: white;
+
+  color: rgb(0, 0, 0);
   padding: 5px;
   margin: 2px;
   border: none;
@@ -140,8 +144,8 @@ body {
   text-decoration: none;
 }
 .filtros #ativo2{
-  background: rgba(241, 164, 101, 0.562);
-  color: rgb(97, 54, 19);
+ 
+  color: rgb(0, 0, 0);
    padding: 5px;
   margin: 2px;
   border: none;
@@ -151,8 +155,8 @@ body {
 }
 
 .filtros #ativo3{
-  background: #30a2eec0;
-  color: rgba(14, 64, 129, 0.911);
+ 
+  color: rgba(0, 0, 0, 0.911);
    padding: 5px;
   margin: 2px;
   border: none;
@@ -168,7 +172,8 @@ body {
   color: #181818f6;
 }
 .destaques h2{
-  text-shadow: 2px 2px 2px #33333365;
+  text-shadow: 2px 2px 2px #55535333;
+  margin-top: 20px;
 }
 
 
@@ -200,9 +205,11 @@ margin: 5px;
   margin: 15px;
   padding: 1px;
   border-radius: 10px;
-  border: 1px solid #929292;
+  border: 1px solid #92929213;
   scroll-snap-align: start;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.548);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+  transition: 0.3s;
+  
 }
 
 
@@ -270,7 +277,7 @@ margin: 5px;
 .mapa {
   display: flex;
   padding: 40px;
-  background: #e8efe6;
+  background: #92929213;
   
 }
 
@@ -284,7 +291,9 @@ margin: 5px;
   margin-bottom: 30px; 
 }
 .mapa iframe{
-  box-shadow: 2px 5px 5px 2px #3333334d
+  box-shadow: 2px 5px 5px 2px #3333334d;
+  
+  
 }
 /* TURISMO */
 .turismo-grid {
