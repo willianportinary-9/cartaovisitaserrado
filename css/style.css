@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #f5f3ef;
+  background: #d4ebd4ad;
 }
 
 /* HEADER */
@@ -22,6 +22,7 @@ body {
   display: flex;
   align-items: center;
   
+  
 }
 
 .logo-icon {
@@ -29,7 +30,8 @@ body {
   height: 70px;
   border-radius: 60%;
   margin-right: 2px;
-  background: url(/img/iconelogo.png)center/cover;
+  background: url(../img/iconelogo.png)center/cover;
+  
 }
 
 .logo-text span {
@@ -87,11 +89,13 @@ body {
 
 .banner h1 {
   font-size: 40px;
-text-shadow: 5px 5px 10px black;
+  text-align: start;
+  text-shadow: 5px 5px 5px  #080808f3;
+
 
 }
-.banner .banner-content p{
-  text-shadow: 5px 5px 10px black;
+.banner  p{
+  text-shadow: 5px 5px 5px  #080808f3;
   
   
 }
@@ -123,10 +127,11 @@ text-shadow: 5px 5px 10px black;
 
   text-align: center;
   
+  
 }
 
 .filtros #ativo {
-  background: #2e7d32;
+  background: #2e7d32d2;
   color: white;
   padding: 5px;
   margin: 2px;
@@ -135,18 +140,19 @@ text-shadow: 5px 5px 10px black;
   text-decoration: none;
 }
 .filtros #ativo2{
-  background: rgb(241, 164, 101);
+  background: rgba(241, 164, 101, 0.562);
   color: rgb(97, 54, 19);
    padding: 5px;
   margin: 2px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
+  
 }
 
 .filtros #ativo3{
-  background: #73c0f3;
-  color: rgb(0, 102, 236);
+  background: #30a2eec0;
+  color: rgba(14, 64, 129, 0.911);
    padding: 5px;
   margin: 2px;
   border: none;
@@ -159,7 +165,10 @@ text-shadow: 5px 5px 10px black;
 
 .destaques .topo {
   text-align: center;
-  
+  color: #181818f6;
+}
+.destaques h2{
+  text-shadow: 2px 2px 2px #33333365;
 }
 
 
@@ -173,6 +182,7 @@ text-shadow: 5px 5px 10px black;
   gap: 15px;
   padding: 15px; 
   scroll-snap-type: x mandatory;
+  
 
 }
 .cards::-webkit-scrollbar {
@@ -192,8 +202,10 @@ margin: 5px;
   border-radius: 10px;
   border: 1px solid #929292;
   scroll-snap-align: start;
-
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.548);
 }
+
+
  .card p {
   margin: 5px 5px 5px;
   
@@ -259,15 +271,21 @@ margin: 5px;
   display: flex;
   padding: 40px;
   background: #e8efe6;
+  
 }
 
-.mapa-img {
-  flex: 1;
-  height: 200px;
-  background: #cfe3cd;
-  border-radius: 10px;
+.mapa img{
+  width: 125px;
+  text-align: center;
 }
-
+.mapa h2{
+  text-align: center;
+  text-shadow:10px 10px 1px 10px #353835;
+  margin-bottom: 30px; 
+}
+.mapa iframe{
+  box-shadow: 2px 5px 5px 2px #3333334d
+}
 /* TURISMO */
 .turismo-grid {
   display: grid;
