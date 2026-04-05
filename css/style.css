@@ -28,8 +28,7 @@ body {
 .logo-icon {
   width: 70px;
   height: 70px;
-  border-radius: 60%;
-  margin-right: 2px;
+  border-radius: 50%;
   background: url(../img/iconelogo.png)center/cover;
   
 }
@@ -40,10 +39,8 @@ body {
 }
 
 .logo-text strong {
-  display: block;
   font-size: 20px;
   color: #2e7d32;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 .menu a {
@@ -80,6 +77,7 @@ body {
   align-items: center;
   padding: 40px;
   color: rgb(255, 255, 255);
+  
 
 
 }
@@ -88,15 +86,18 @@ body {
 }
 
 .banner h1 {
-  font-size: 40px;
-  text-align: start;
-  text-shadow: 5px 5px 5px  #080808f3;
-
-
+   font-size: 32px;
+}
+.banner .banner-content{
+  background: rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
+  
 }
 .banner  p{
-  text-shadow: 5px 5px 5px  #080808f3;
+  font-size: 18px;;
   
+ 
   
 }
 
@@ -112,56 +113,32 @@ body {
 
 /* BUSCA */
 .busca {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   padding: 20px;
-  text-align: center;
 }
 
 .busca input {
-  width: 80%;
-  padding: 12px;
-  border-radius: 10px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-.filtros  {
-
+.filtros {
   text-align: center;
-  font-size: 100%;
-  font-size: large;
-  margin-bottom: -10px;
-  margin-top: 10px;
-  
-  
+  background: #2e7d32;
+  padding: 10px;
 }
 
-.filtros #ativo {
-
-  color: rgb(0, 0, 0);
-  padding: 5px;
-  margin: 2px;
-  border: none;
-  border-radius: 8px;
+.filtros a {
+  color: white;
+  margin: 5px;
   text-decoration: none;
 }
-.filtros #ativo2{
- 
-  color: rgb(0, 0, 0);
-   padding: 5px;
-  margin: 2px;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  
-}
-
-.filtros #ativo3{
- 
-  color: rgba(0, 0, 0, 0.911);
-   padding: 5px;
-  margin: 2px;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
+.filtros span{
+  color: #ffffff;
 }
 
 /* DESTAQUES*/
@@ -182,11 +159,10 @@ body {
 /* CARDS */
 .cards {
   display: flex;
-  flex-wrap: nowrap; /* NÃO quebra linha */
-  overflow-x: auto; /* ativa scroll lateral */
+  overflow-x: auto;
   gap: 15px;
-  padding: 15px; 
-  scroll-snap-type: x mandatory;
+  padding: 15px;
+ /* scroll-snap-type: x mandatory;*/
   
 
 }
@@ -201,27 +177,21 @@ margin: 5px;
 .card {
   min-width: 250px;
   background: white;
-  flex-shrink: 10;
-  margin: 15px;
-  padding: 1px;
   border-radius: 10px;
-  border: 1px solid #92929213;
-  scroll-snap-align: start;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
-  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding-bottom: 10px;
   
 }
 
 
  .card p {
-  margin: 5px 5px 5px;
+  margin: 5px 
   
 }
 
 .acoes {
   display: flex;
-  gap: 10px;
- justify-content: center;
+  justify-content: center;
 }
 
 .btn {
@@ -275,9 +245,7 @@ margin: 5px;
 
 /* MAPA */
 .mapa {
-  display: flex;
-  padding: 40px;
-  background: #92929213;
+  padding: 20px;
   
 }
 
@@ -287,13 +255,15 @@ margin: 5px;
 }
 .mapa h2{
   text-align: center;
-  text-shadow:10px 10px 1px 10px #353835;
-  margin-bottom: 30px; 
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 .mapa iframe{
   box-shadow: 2px 5px 5px 2px #3333334d;
-  
-  
+    
 }
 /* TURISMO */
 .turismo-grid {
@@ -302,7 +272,14 @@ margin: 5px;
   gap: 10px;
   padding: 20px;
 }
-
+.turismo .mini img{
+width: 100%;
+border-radius: 5px;
+}
+.turismo .principal img{
+width: 100%;
+border-radius: 5px;
+}
 /* FOOTER */
 footer {
   background: #1b5e20;
@@ -312,7 +289,10 @@ footer {
 
 /* MOBILE */
 @media(max-width: 480px) {
-
+  
+  .busca input {
+    width: 100%;
+  }
   .menu {
     display: none;
     
@@ -325,8 +305,7 @@ footer {
     
   }
   .banner {
-    height: 250px;
-    padding: 20px;
+    height: 200px;
   
   }
 .cards::-webkit-scrollbar {
@@ -343,5 +322,155 @@ footer {
   }
 .nota {color: #1b5e20;
 
+}
+/*----------FORMULARIO------------*/
+.reserva {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #c3ffb779;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.reserva h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2e7d32;
+}
+
+.grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.grupo label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.grupo input,
+.grupo textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.grupo textarea {
+  resize: none;
+  height: 80px;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* HERO */
+.hero {
+  position: relative;
+  height: 300px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* OVERLAY ESCURO */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  
+}
+
+.overlay h1 {
+  font-size: 26px;
+}
+
+.overlay p {
+  font-size: 14px;
+}
+
+/* GALERIA SCROLL */
+.galeria-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 15px;
+  background-color: #5758572d;
+}
+
+.galeria-scroll img {
+  width: 140px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  
+}
+body{
+  background:#e8ebe8ad
+
+ 
+}
+
+/* BOX INFO */
+.box-info {
+  background: #050505bd;
+  margin: 10px ;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  
+}
+
+.box-info h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.box-info p {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+/* ÍCONES */
+.icones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 15px;
+  
+}
+
+.icones div {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
 }
 }

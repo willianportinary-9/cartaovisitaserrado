@@ -1,64 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/sitio.css">
-    <title>Document</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<title>Sítio Stones</title>
 </head>
-<body>
-   <section class="detalhe2">
 
-  <!-- HERO -->
+<body>
+
+<section class="detalhe2">
+
   <div class="hero">
     <img src="img/sitiostonesex.jpg">
-    
     <div class="overlay">
       <h1>Sítio Stones</h1>
-      <p>⭐ 4.8 • Próximo à Cachoeira do Serrado</p>
+      <p>⭐ 4.8 • Próximo à Cachoeira</p>
     </div>
   </div>
 
-  <!-- GALERIA HORIZONTAL -->
-  <div class="galeria-scroll">
-    <img src="/pousadas/sitiostones/img1.jpg">
-    <img src="/pousadas/sitiostones/img2.jpg">
-    <img src="/pousadas/sitiostones/img3.jpg">
-    <img src="/pousadas/sitiostones/img4.jpg">
-  </div>
-
-  <!-- INFO -->
   <div class="box-info">
-    <h2>Sobre a pousada</h2>
-    <p>
-      Casa com suíte, cozinha completa, piscina, rio privativo,
-      área ampla e espaço ideal para família e descanso.
-    </p>
-
-    <!-- ÍCONES -->
-    <div class="icones">
-      <div>🏊 Piscina</div>
-      <div>🚗 Estacionamento</div>
-      <div>🍳 Cozinha</div>
-      <div>🌊 Rio</div>
-    </div>
-  </div>
-
- 
-  <div class="reserva">
-    <a href="https://wa.me/5538991090350" target="_blank">
-      Falar no WhatsApp
-    </a>
+    <h2>Sobre</h2>
+    <p>Pousada com piscina e natureza</p>
   </div>
 
 </section>
-  <footer>
-    <div>
+<section class="reserva">
+  <h2>Reserve sua estadia</h2>
 
-
+  <form id="formReserva">
+    <div class="grupo">
+      <label>Nome completo</label>
+      <input type="text" placeholder="Seu nome" required>
     </div>
-  </footer>
 
+    <div class="grupo">
+      <label>Telefone</label>
+      <input type="tel" placeholder="(00) 00000-0000" required>
+    </div>
+
+    <div class="linha">
+      <div class="grupo">
+        <label>Check-in</label>
+        <input type="date" required>
+      </div>
+
+      <div class="grupo">
+        <label>Check-out</label>
+        <input type="date" required>
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="grupo">
+        <label>Adultos</label>
+        <input type="number" min="1" value="1">
+      </div>
+
+      <div class="grupo">
+        <label>Crianças</label>
+        <input type="number" min="0" value="0">
+      </div>
+    </div>
+
+    <div class="grupo">
+      <label>Observações</label>
+      <textarea placeholder="Ex: quarto com vista, cama extra..."></textarea>
+    </div>
+
+    <button type="submit">Reservar via WhatsApp</button>
+  </form>
 </section>
+
+<script>
+document.getElementById("formReserva").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nome = document.querySelector("input[type=text]").value;
+  const telefone = document.querySelector("input[type=tel]").value;
+  const datas = document.querySelectorAll("input[type=date]");
+  const checkin = datas[0].value;
+  const checkout = datas[1].value;
+  const numeros = document.querySelectorAll("input[type=number]");
+  const adultos = numeros[0].value;
+  const criancas = numeros[1].value;
+  const obs = document.querySelector("textarea").value;
+
+  const mensagem = `Reserva de Pousada:
+  
+Nome: ${nome}
+Telefone: ${telefone}
+Check-in: ${checkin}
+Check-out: ${checkout}
+Adultos: ${adultos}
+Crianças: ${criancas}
+Observações: ${obs}`;
+
+  const numero = "5599999999999"; // coloque o número da pousada
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+});
+</script>
+
 </body>
 </html>

@@ -1,20 +1,10 @@
 
-const input = document.getElementById("busca");
-const cards = document.querySelectorAll(".card");
-
-input.addEventListener("keyup", function() {
-  const valor = input.value.toLowerCase();
+function buscar() {
+  let input = document.getElementById("inputBusca").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
-    const texto = card.innerText.toLowerCase();
-
-    if (texto.includes(valor)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+    let texto = card.innerText.toLowerCase();
+    card.style.display = texto.includes(input) ? "block" : "none";
   });
-  const titulo = card.querySelector("h3").innerText.toLowerCase();
-
-  
-});
+}
