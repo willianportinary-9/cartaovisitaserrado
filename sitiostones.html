@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css">
 <title>Sítio Stones</title>
 </head>
 
 <body>
-
+<style>
+  @media(max-width: 600px) {
+  
+  .busca input {
+    width: 100%;
+  }
+  .menu {
+    display: none;
+    
+  
+  }
+}
+</style>
 <section class="detalhe2">
 
   <div class="hero">
@@ -19,11 +31,16 @@
   </div>
 
   <div class="miniaturas">
-    <img src="pousadas/sitiostones/img1.jpg" onclick="trocar(this)">
-    <img src="pousadas/sitiostones/img2.jpg" onclick="trocar(this)">
-    <img src="pousadas/sitiostones/img3.jpg" onclick="trocar(this)">
-    <img src="pousadas/sitiostones/img4.jpg" onclick="trocar(this)">
+    <img src="pousadas/sitiostones/img1.jpg" class="img-card" onclick="abrirModal(this)">
+    <img src="pousadas/sitiostones/img2.jpg" class="img-card" onclick="abrirModal(this)">
+    <img src="pousadas/sitiostones/img3.jpg" class="img-card" onclick="abrirModal(this)">
+    <img src="pousadas/sitiostones/img4.jpg" class="img-card" onclick="abrirModal(this)">
+    <img src="pousadas/sitiostones/img5.jpg" class="img-card" onclick="abrirModal(this)">
   </div>
+<div id="modal" class="modal">
+  <span class="fechar" onclick="fecharModal()">&times;</span>
+  <img id="imgModal" class="modal-conteudo">
+</div>
 </section>
  
 
@@ -84,6 +101,15 @@
 <div class="btn-voltar"><a href="index.html" >Voltar</a></div>
 
 <script>
+  function abrirModal(img) {
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("imgModal").src = img.src;
+}
+
+function fecharModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
 document.getElementById("formReserva").addEventListener("submit", function(e) {
   e.preventDefault();
 
