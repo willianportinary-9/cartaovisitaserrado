@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 <title>Sítio Stones</title>
 </head>
 
@@ -11,19 +11,29 @@
 <section class="detalhe2">
 
   <div class="hero">
-    <img src="img/sitiostonesex.jpg">
+    <img src="img/sitiostonesex.jpg" id="imgprincipal">
     <div class="overlay">
       <h1>Sítio Stones</h1>
       <p>⭐ 4.8 • Próximo à Cachoeira</p>
     </div>
   </div>
 
-  <div class="box-info">
+  <div class="miniaturas">
+    <img src="/pousadas/sitiostones/img1.jpg" onclick="trocar(this)">
+    <img src="/pousadas/sitiostones/img2.jpg" onclick="trocar(this)">
+    <img src="/pousadas/sitiostones/img3.jpg" onclick="trocar(this)">
+    <img src="/pousadas/sitiostones/img4.jpg" onclick="trocar(this)">
+  </div>
+</section>
+ 
+
+<div class="box-info">
     <h2>Sobre</h2>
     <p>Pousada com piscina e natureza</p>
   </div>
 
-</section>
+
+
 <section class="reserva">
   <h2>Reserve sua estadia</h2>
 
@@ -69,7 +79,9 @@
 
     <button type="submit">Reservar via WhatsApp</button>
   </form>
+  
 </section>
+<div class="btn-voltar"><a href="index.html" >Voltar</a></div>
 
 <script>
 document.getElementById("formReserva").addEventListener("submit", function(e) {
@@ -95,7 +107,7 @@ Adultos: ${adultos}
 Crianças: ${criancas}
 Observações: ${obs}`;
 
-  const numero = "5599999999999"; // coloque o número da pousada
+  const numero = "5538991090350"; // coloque o número da pousada
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 

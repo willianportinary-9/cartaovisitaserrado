@@ -34,13 +34,14 @@ body {
 }
 
 .logo-text span {
-  font-size: 18px;
-  text-shadow: none;
+  font-size: 15px;
+  text-shadow: 5px 5px 5px #55535333;
 }
 
 .logo-text strong {
   font-size: 20px;
   color: #2e7d32;
+ text-shadow: 5px 5px 7px #55535333;
 }
 
 .menu a {
@@ -53,8 +54,9 @@ body {
   background: #2e7d32;
   color: white;
   padding: 10px 15px;
-  border-radius: 8px;
+  border-radius: 5px;
   text-decoration: none;
+  margin-left: -12px;
   
   
 }
@@ -92,6 +94,7 @@ body {
   background: rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
+  margin-left: -45px;
   
 }
 .banner  p{
@@ -330,7 +333,7 @@ footer {
   padding: 25px;
   background: #c3ffb779;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(61, 58, 58, 0.1);
 }
 
 .reserva h2 {
@@ -435,27 +438,27 @@ button:hover {
   
 }
 body{
-  background:#e8ebe8ad
+  background:#ffffffad
 
  
 }
 
 /* BOX INFO */
 .box-info {
-  background: #050505bd;
+  background: #c3ffb779;
   margin: 10px ;
   padding: 15px;
   border-radius: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   
 }
 
 .box-info h2 {
-  color: #ffffff;
+  color: #2e7d32;
   margin-bottom: 10px;
 }
 .box-info p {
-  color: #ffffff;
+  color: #2e7d32;
   margin-bottom: 10px;
 }
 /* ÍCONES */
@@ -466,11 +469,49 @@ body{
   margin-top: 15px;
   
 }
-
+/*GALERIA*/
 .icones div {
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;
   font-size: 14px;
+}
+.galeria-detalhe {
+  padding: 15px;
+}
+
+.principal img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.miniaturas img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-voltar a{
+   width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  text-align: center;
+ 
 }
 }
