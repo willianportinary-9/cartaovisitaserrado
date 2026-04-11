@@ -66,8 +66,8 @@
 
     <div class="card">
   <img src="img/logo.png">
-  <span class="tag">POUSADA</span>
-  <h3>Sítio Stones</h3>
+  <span class="tagR">RESTAURANTE</span>
+  <h3>Restaurante </h3>
   <p>⭐ Próximo à Cachoeira do Serrado</p>
 
   <div class="acoes">
@@ -75,6 +75,7 @@
 
   </div>
 </div>
+
 
     <div class="card">
   <img src="img/logo.png">
@@ -88,14 +89,14 @@
   </div>
 </div>
 
-    <div class="card">
+<div class="card">
   <img src="img/logo.png">
   <span class="tag">POUSADA</span>
   <h3>Sítio Stones</h3>
   <p>⭐ Próximo à Cachoeira do Serrado</p>
 
   <div class="acoes">
-    <a href="" class="btn">Ver detalhes</a>
+    <a href="sitiostones.html" class="btn">Ver detalhes</a>
 
   </div>
 </div>
@@ -104,9 +105,12 @@
 </section>
 
 <!-- MAPA -->
+ <div>
+    <p class="tituloP">📍 Veja como chegar </p>
+  </div>
 <section class="mapa">
-  <div class="mapa-texto">
-    <h2>📍 Veja como chegar </h2>
+ 
+    <div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.3909238167134!2d-42.846982488893836!3d-15.6773896
     20022865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x751f36688d48f3b%3A0xb14c7c35cb3cc92e!2sCachoeira%20do%20Serrado!5e0!3m2!1spt-BR!
     2sbr!4v1775347810840!5m2!1spt-BR!2sbr" width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -116,74 +120,63 @@
 </section>
 
 <!-- -----------------PONTOS TURISTICOS ----------------------->
-<section class="turismo">
-  <div class="topo">
-    <h2>🌊 Pontos Turísticos</h2>
-    <button>Ver todos →</button>
+<div>
+    <p class="tituloP">📷 Pontos Turísticos</p>
+    
   </div>
+<section class="turismo">
+  
 
   <div class="turismo-grid">
 
-    <div class="principal">
-      <img src="./img/logo1.png">
-      <div>
-        <h3>Cachoeira do Serrado</h3>
-        <p>A principal atração da região. Beleza natural e águas cristalinas.</p>
-        <span>📍 14 km da BR 122</span>
-        <div class="acoes">
-          <button>Ver rota</button>
-          <button>Ver locais próximos</button>
-        </div>
-      </div>
+    <div class="card-pturistico">
+      <img src="./img/logo1.png" class="img-card-pturisco" onclick="abrirModal(this)">
+      
+        <h3>2ª Cachoeira do  Serrado</h3>
+        <p>Linda e cristalina como a primeira </p>
+        
+        <a href="https://maps.app.goo.gl/27aN6otPv9ciXEHh7" class="btn-rota">Ver rota</a>
+        <div id="modal" class="modal">
+  <span class="fechar" onclick="fecharModal()">&times;</span>
+  <img id="imgModal" class="modal-conteudo">
+</div>
+
     </div>
 
-    <div class="mini">
-      <img src="./img/logo1.png">
-      <h4>2ª Cachoeira do Serrado</h4>
-    </div>
-
-    <div class="mini">
-      <img src="./img/logo1.png">
-      <h4>Riacho Doce</h4>
-    </div>
-
-  </div>
 </section>
 
 <!-- APOIADORES -->
 <section class="apoio">
-  <h2>🤝 Apoiadores do Turismo</h2>
+ <div class="tituloP"> <p>🤝 Apoiadores do Turismo</p></div>
 
   <div class="apoio-grid">
-    <div>CLÁUDIO DESPACHANTE</div>
-    <div>AGAENE DENTISTA</div>
-    <div>CLEITON VEREADOR</div>
-    <div>RENATO DE SUELI</div>
-    <div>Rubinho do Ramalhudo</div>
+    <a href="https://wa.me/5538999643492" target="_blank" ><img src="img/iconelogo.png"></a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="footer-dev">
   <div class="footer-grid">
+
     <div>
       <h3>Guia Serrado</h3>
       <p>Guia interativo de pousadas, restaurantes e atrações turísticas.</p>
     </div>
-
-    <div>
-      <h4>Desenvolvedor responsável</h4>
-      <p>(38) 9 999643492</p>
-      
-    </div>
-
-    <div>
-      <h4>Siga-nos</h4>
-      <button><p>https://www.instagram.com/willianjuniorop/#</p></button>
-      <p>WhatsApp</p>
-    </div>
   </div>
-</footer>
+   
+  <div class="footer-grid-dev">
+ <h4>Desenvolvedor</h4>
+  <div class="footer-grid-dev1">
+      <a href="https://www.instagram.com/willianjuniorop/" target="_blank"> <img src="img/iconeinstagram.png"></a>
+
+      <a href="https://wa.me/55389999643492" target="_blank"> <img src="img/whatsapp.png"></a>
+      
+      <a href="tel:55389999643492" target="_blank"><img src="img/telefone.png"></a>
+  </div>
+    </div>
+
+  </footer>
+
 <script src="js/script.js"> </script>
 
 </body>

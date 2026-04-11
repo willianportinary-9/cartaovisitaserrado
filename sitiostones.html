@@ -25,8 +25,7 @@
   <div class="hero">
     <img src="img/sitiostonesex.jpg" id="imgprincipal">
     <div class="overlay">
-      <h1>Sítio Stones</h1>
-      <p>⭐ 4.8 • Próximo à Cachoeira</p>
+      <h1>Sítio Stones<p>⭐ 4.8 • Próximo à Cachoeira</h1>
     </div>
   </div>
 
@@ -94,22 +93,36 @@
       <textarea placeholder="Ex: quarto com vista, cama extra..."></textarea>
     </div>
 
-    <button type="submit">Reservar via WhatsApp</button>
+    <button type="submit" class="bnt-reservawhats">Reservar via WhatsApp</button>
   </form>
   
 </section>
-<div class="btn-voltar"><a href="index.html" >Voltar</a></div>
+<div class="btn-voltar"><a href="index.html" >VOLTAR</a></div>
 
 <script>
-  function abrirModal(img) {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("imgModal").src = img.src;
+  
+// ABRIR MODAL
+function abrirModal(img) {
+  const modal = document.getElementById("modal");
+  const imgModal = document.getElementById("imgModal");
+
+  modal.style.display = "flex"; 
+  imgModal.src = img.src;
 }
 
+// FECHAR MODAL
 function fecharModal() {
   document.getElementById("modal").style.display = "none";
 }
 
+// FECHAR AO CLICAR FORA DA IMAGEM
+const modal = document.getElementById("modal");
+
+modal.addEventListener("click", function(e) {
+  if (e.target === modal) {
+    fecharModal();
+  }
+});
 document.getElementById("formReserva").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -133,7 +146,7 @@ Adultos: ${adultos}
 Crianças: ${criancas}
 Observações: ${obs}`;
 
-  const numero = "5538991090350"; // coloque o número da pousada
+  const numero = "5538991090350";
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 

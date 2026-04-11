@@ -54,6 +54,8 @@
   border-radius: 5px;
   text-decoration: none;
   margin-left: -12px;
+  cursor: pointer;
+  transition: 0.3s;
   
   
 }
@@ -193,7 +195,11 @@ margin: 5px;
   display: flex;
   justify-content: center;
 }
-
+.acoes a {
+    font-size: 12px;
+    padding: 6px 8px;
+    
+  }
 .btn {
   display: flex;
   align-items: center;
@@ -238,6 +244,15 @@ margin: 5px;
   border-radius: 5px;
   
 }
+.tagR {
+  background: rgb(216, 184, 2);
+  color: white;
+  padding: 3px 6px;
+  font-size: 10px;
+  border-radius: 5px;
+  
+}
+
 
 .restaurante {
   background: orange;
@@ -246,6 +261,7 @@ margin: 5px;
 /* MAPA */
 .mapa {
   padding: 20px;
+   flex-direction: column;
   
 }
 
@@ -253,39 +269,87 @@ margin: 5px;
   width: 125px;
   text-align: center;
 }
-.mapa h2{
-  text-align: center;
-  background: #2e7d32;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+
 .mapa iframe{
   box-shadow: 2px 5px 5px 2px #3333334d;
     
 }
 /* TURISMO */
+.tituloP {
+  text-align: center;
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+
+  margin-bottom: 10px;
+}
+.img-card-pturisco {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.card-pturistico{
+
+  min-width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding-bottom: 10px;
+}
 .turismo-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 10px;
   padding: 20px;
+   grid-template-columns: fr;
+  
 }
-.turismo .mini img{
-width: 100%;
-border-radius: 5px;
-}
-.turismo .principal img{
-width: 100%;
-border-radius: 5px;
-}
-/* FOOTER */
-footer {
-  background: #1b5e20;
+.btn-rota{
+  padding: 10px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  background-color: #3498db;
+  border-radius: 10px;
   color: white;
-  padding: 30px;
+  text-decoration: none;
+  margin: 15px auto;
+  font-weight: bold;
+
+
 }
+/*------------ APOIO -----------*/
+.apoiogrid a, img{
+  width: 100px;
+}
+
+/* FOOTER */
+.footer-dev {
+  background: #2e7d32;
+  color: white;
+  padding: 20px 10px;
+  margin-top: 30px;
+}
+.footer-grid-dev1{
+ display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 25px;
+}
+.footer-grid-dev1 img{
+width: 50px;
+}
+.footer-grid-dev h4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 
 /* MOBILE */
 @media(max-width: 600px) {
@@ -299,11 +363,7 @@ footer {
   
   }
 }
-.acoes a {
-    font-size: 12px;
-    padding: 6px 8px;
-    
-  }
+
   .banner {
     height: 200px;
   
@@ -312,14 +372,6 @@ footer {
   display: none;
 }
   
-
-  .mapa {
-    flex-direction: column;
-  }
-
-  .turismo-grid {
-    grid-template-columns: fr;
-  }
 .nota {color: #1b5e20;
 
 }
@@ -370,7 +422,7 @@ footer {
   gap: 10px;
 }
 
-button {
+.bnt-reservawhats {
   width: 100%;
   padding: 12px;
   background: linear-gradient(45deg, #2ecc71, #27ae60);
@@ -386,60 +438,6 @@ button:hover {
   transform: scale(1.03);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-/* HERO */
-.hero {
-  position: relative;
-  height: 300px;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* OVERLAY ESCURO */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  
-}
-
-.overlay h1 {
-  font-size: 26px;
-}
-
-.overlay p {
-  font-size: 14px;
-}
-
-/* GALERIA SCROLL */
-.galeria-scroll {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 15px;
-  background-color: #5758572d;
-}
-
-.galeria-scroll img {
-  width: 140px;
-  height: 100px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
-  
-}
-body{
-  background:#ffffffad
-
- 
-}
-
 /* BOX INFO */
 .box-info {
   background: #c3ffb779;
@@ -458,49 +456,12 @@ body{
   color: #2e7d32;
   margin-bottom: 10px;
 }
-/* ÍCONES */
-.icones {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 15px;
-  
-}
-/*GALERIA*/
-.icones div {
-  background: #f1f1f1;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 14px;
-}
-.galeria-detalhe {
-  padding: 15px;
-}
 
-.principal img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.miniaturas {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.miniaturas img {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.btn-voltar a{
-   width: 100%;
+/* BOTAO VOLTAR*/
+.btn-voltar a {
+width: 100%;
   padding: 12px;
-  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  background: linear-gradient(45deg, #1d462d, #123520);
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -508,44 +469,88 @@ body{
   cursor: pointer;
   transition: 0.3s;
   text-decoration: none;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-  /* visualização imagem*/
+
+/* HERO (imagem principal) */
+.hero {
+  position: relative;
+}
+
+#imgprincipal {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* TEXTO SOBRE IMAGEM */
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 22px;
+}
+
+.overlay p {
+  font-size: 14px;
+}
+
+/* MINIATURAS */
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto; /* scroll lateral */
+}
+
 .img-card {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
   cursor: pointer;
+  flex-shrink: 0;
   transition: 0.3s;
 }
 
 .img-card:hover {
-  opacity: 0.8;
+  transform: scale(1.05);
 }
 
-/* Modal */
+/* MODAL */
 .modal {
-  display: none;
+  display: none; 
   position: fixed;
   z-index: 999;
-  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.9);
+
+  align-items: center;
+  justify-content: center;
 }
 
+/* IMAGEM DO MODAL */
 .modal-conteudo {
-  margin: auto;
-  display: block;
   max-width: 90%;
-  max-height: 80%;
+  max-height: 80vh;
+  border-radius: 12px;
 }
 
+/* BOTÃO FECHAR */
 .fechar {
   position: absolute;
   top: 20px;
-  right: 35px;
+  right: 25px;
   color: white;
-  font-size: 40px;
+  font-size: 35px;
   cursor: pointer;
 }
  
