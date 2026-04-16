@@ -1,11 +1,16 @@
 
-function buscar() {
-  let input = document.getElementById("inputBusca").value.toLowerCase();
+function filtrar() {
+  let input = document.getElementById("busca").value.toLowerCase();
   let cards = document.querySelectorAll(".card");
 
-  cards.forEach(card => {
-    let texto = card.innerText.toLowerCase();
-    card.style.display = texto.includes(input) ? "block" : "none";
+  cards.forEach(function(card) {
+    let texto = card.textContent.toLowerCase();
+
+    if (texto.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
   });
 }
 function abrirModal(img) {
@@ -29,3 +34,6 @@ modal.addEventListener("click", function(e) {
     fecharModal();
   }
 });
+
+
+

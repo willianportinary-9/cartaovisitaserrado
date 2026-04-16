@@ -14,10 +14,10 @@
 <!-- HEADER -->
 <header class="header">
   <div class="logo">
-    <div class="logo-icon"></div>
+   <a href="index.html"> <div class="logo-icon"></div></a>
     <div class="logo-text">
       
-     <a> <strong><span id="logoguia">Guia interativo</span><br> SERRADO</strong></a>
+     <a href="index.html"> <strong><span id="logoguia">Guia interativo</span><br> SERRADO</strong></a>
     </div>
   </div>
 
@@ -38,6 +38,7 @@
 <!-- BUSCA -->
 <section class="busca">
   <input type="text" placeholder="Buscar pousada ou restaurante">
+<button id="btn-busca" onclick="filtrar()">Buscar</button>
 
  
 </section>
@@ -133,9 +134,23 @@
       <img src="./img/logo1.png" class="img-card-pturisco" onclick="abrirModal(this)">
       
         <h3>2ª Cachoeira do  Serrado</h3>
-        <p>Linda e cristalina como a primeira </p>
+        <p>Linda e cristalina assim como a primeira</p>
         
         <a href="https://maps.app.goo.gl/27aN6otPv9ciXEHh7" class="btn-rota">Ver rota</a>
+        <div id="modal" class="modal">
+  <span class="fechar" onclick="fecharModal()">&times;</span>
+  <img id="imgModal" class="modal-conteudo">
+</div>
+
+    </div>
+
+    <div class="card-pturistico">
+      <img src="./img/logo1.png" class="img-card-pturisco" onclick="abrirModal(this)">
+      
+        <h3>3ª Cachoeira do  Serrado</h3>
+        <p>Linda e cristalina assim como a primeira </p>
+        
+        <a href="https://maps.app.goo.gl/CP79YFnsL87E5bnD8" class="btn-rota">Ver rota</a>
         <div id="modal" class="modal">
   <span class="fechar" onclick="fecharModal()">&times;</span>
   <img id="imgModal" class="modal-conteudo">
