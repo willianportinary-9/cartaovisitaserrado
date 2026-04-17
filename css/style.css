@@ -285,6 +285,7 @@ margin: 5px;
     
 }
 /* TURISMO */
+
 .tituloP {
   text-align: center;
   background: #2e7d32;
@@ -301,6 +302,7 @@ margin: 5px;
   cursor: pointer;
   flex-shrink: 0;
   transition: 0.3s;
+ 
 }
 
 .card-pturistico{
@@ -310,6 +312,9 @@ margin: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   padding-bottom: 10px;
+ 
+
+  
 }
 .card-pturistico h3,p{
 margin-left: 7px;
@@ -321,7 +326,8 @@ margin-left: 7px;
   gap: 10px;
   padding: 20px;
    grid-template-columns: fr;
-  
+   display: flex;
+  overflow-x: auto;
 }
 .btn-rota{
   padding: 10px;
